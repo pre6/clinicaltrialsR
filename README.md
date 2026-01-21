@@ -34,11 +34,11 @@ This package implements a small but complete client for the ClinicalTrials.gov A
 
 ## 1. Study Discovery & Search
 
-Functions to search clinical trials by keyword, condition, or intervention.
+Functions to search keyword in the titles of the clinical trials.
 
-`ct_search_studies(query = NULL, module = NULL, page_size = 100)`
+`ct_search_studies(keyword = NULL ,start_date =NULL , city= NULL, status = NULL, module = NULL, page_size = 100)`
 
-Search for clinical trials using keywords or structured medical filters and input a optional module paramter for certain field groups.
+Search for clinical trials using keywords, time period, status or city and input a optional module paramter for certain field groups.
 
 ## 2. Trial Retrieval
 
