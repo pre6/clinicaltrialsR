@@ -36,17 +36,17 @@ This package implements a small but complete client for the ClinicalTrials.gov A
 
 Functions to search clinical trials by keyword, condition, or intervention.
 
-`ct_search_studies(query = NULL, condition = NULL, intervention = NULL, page_size = 100)`
+`ct_search_studies(query = NULL, module = NULL, page_size = 100)`
 
-Search for clinical trials using keywords or structured medical filters.
+Search for clinical trials using keywords or structured medical filters and input a optional module paramter for certain field groups.
 
 ## 2. Trial Retrieval
 
 Functions to retrieve detailed information for specific trials.
 
-`ct_get_study(nct_id)`
+`ct_get_study(nct_id, module = NULL)`
 
-Retrieve full metadata for a single clinical trial using its NCT identifier.
+Retrieve full metadata for a single clinical trial using its NCT identifier and input a optional module paramter for certain field groups.
 
 
 ## 3. Metadata & Field Discovery
@@ -55,6 +55,6 @@ Functions to explore what data fields are available in the API.
 
 `ct_metadata()`
 
-List all available study fields and their definitions.
+List all available study fields and their definitions and the module the field belongs to.
 
 
