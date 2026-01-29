@@ -53,6 +53,23 @@
     grepl("^\\d{4}-\\d{2}-\\d{2}$", x)
 }
 
+## helper function for studies to table script:
+
+# helpers.R
+
+`%||%` <- function(a, b) {
+  if (is.null(a) || length(a) == 0) b else a
+}
+
+get_in <- function(x, path, default = NA_character_) {
+  for (nm in path) {
+    if (is.null(x[[nm]])) return(default)
+    x <- x[[nm]]
+  }
+  if (is.null(x) || length(x) == 0) return(default)
+  if (is.atomic(x)) return(as.character(x)[1])
+  default
+}
 
 
 
